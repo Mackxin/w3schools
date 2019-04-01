@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Text field</h2>
+<p>The <strong>input type="text"</strong> defines a one-line text input field:</p>
+
+<form action="/action_page.php">
+First name:<br>
+<input type="text" name="firstname">
+<br>
+Last name:<br>
+<input type="text" name="lastname">
+<br><br>
+<input type="submit">
+</form>
+
+<p>Note that the form itself is not visible.</p>
+<p>Also note that the default width of a text field is 20 characters.</p>
+
+<h2>Password field</h2>
+<p>The <strong>input type="password"</strong> defines a password field:</p>
+
+<form action="">
+User name:<br>
+<input type="text" name="userid">
+<br>
+User password:<br>
+<input type="password" name="psw">
+</form>
+
+<p>The characters in a password field are masked (shown as asterisks or circles).</p>
+
+<h2>Submit Button</h2>
+<p>The <strong>input type="submit"</strong> defines a button for submitting form data to a form-handler:</p>
+
+<form action="/action_page.php">
+First name:<br>
+<input type="text" name="firstname" value="Mickey">
+<br>
+Last name:<br>
+<input type="text" name="lastname" value="Mouse">
+<br><br>
+<input type="submit" value="Submit">
+</form> 
+
+<p>If you click "Submit", the form-data will be sent to a page called "/action_page.php".</p>
+
+<form action="/action_page.php">
+    First name:<br>
+    <input type="text" name="firstname" value="Mickey">
+    <br>
+    Last name:<br>
+    <input type="text" name="lastname" value="Mouse">
+    <br><br>
+    <input type="submit">
+</form> 
+
+<h2>Reset Button</h2>
+<p>The <strong>input type="reset"</strong> defines a reset button that will reset all form values to their default values:</p>
+
+<form action="/action_page.php">
+First name:<br>
+<input type="text" name="firstname" value="Mickey">
+<br>
+Last name:<br>
+<input type="text" name="lastname" value="Mouse">
+<br><br>
+<input type="submit" value="Submit">
+<input type="reset">
+</form> 
+
+<p>If you change the input values and then click the "Reset" button, the form-data will be reset to the default values.</p>
+
+<h2>Radio Buttons</h2>
+<p>The <strong>input type="radio"</strong> defines a radio button:</p>
+
+<form action="/action_page.php">
+  <input type="radio" name="gender" value="male" checked> Male<br>
+  <input type="radio" name="gender" value="female"> Female<br>
+  <input type="radio" name="gender" value="other"> Other<br><br>
+  <input type="submit">
+</form> 
+
+<h2>Checkboxes</h2>
+<p>The <strong>input type="checkbox"</strong> defines a checkbox:</p>
+
+<form action="/action_page.php">
+<input type="checkbox" name="vehicle1" value="Bike">I have a bike
+<br>
+<input type="checkbox" name="vehicle2" value="Car">I have a car 
+<br><br>
+<input type="submit">
+</form> 
+
+<form action="/action_page.php">
+    Select your favorite color:
+    <input type="color" name="favcolor" value="#ff0000">
+    <input type="submit">
+<form>
+  Birthday:
+  <input type="date" name="bday">
+</form></form>
+  
+<form>
+    Birthday:
+    <input type="date" name="bday">
+</form>
+
+<form>
+    Enter a date before 1980-01-01:
+    <input type="date" name="bday" max="1979-12-31"><br>
+    Enter a date after 2000-01-01:
+    <input type="date" name="bday" min="2000-01-02"><br>
+</form>
+
+<form>
+    Birthday (date and time):
+    <input type="datetime-local" name="bdaytime">
+</form>
+
+<form>
+    E-mail:
+    <input type="email" name="email">
+</form>
+
+<form>
+    Select a file: <input type="file" name="myFile">
+</form>
+
+<form>
+    Birthday (month and year):
+    <input type="month" name="bdaymonth">
+</form>
+
+<form>
+    Quantity (between 1 and 5):
+    <input type="number" name="quantity" min="1" max="5">
+</form>
+
+<form>
+    Quantity:
+    <input type="number" name="points" min="0" max="100" step="10" value="30">
+</form>
+
+<form>
+    <input type="range" name="points" min="0" max="10">
+</form>
+
+<form>
+    Search Google:
+    <input type="search" name="googlesearch">
+</form>
+
+<form>
+    Telephone:
+    <input type="tel" name="usrtel">
+</form>
+
+
+<form>
+    Select a time:
+    <input type="time" name="usr_time">
+</form>
+
+<form>
+    Add your homepage:
+    <input type="url" name="homepage">
+</form>
+
+<form>
+    Select a week:
+    <input type="week" name="week_year">
+</form>
+
+
+</body>
+</html>
