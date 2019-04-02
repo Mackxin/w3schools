@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p {
+  border: 2px solid black;
+  outline: #4CAF50 solid 10px;
+  margin: auto;  
+  padding: 20px;
+  text-align: center;
+}
+p.dotted {outline-style: dotted;}
+p.dashed {outline-style: dashed;}
+p.solid {outline-style: solid;}
+p.double {outline-style: double;}
+p.groove {outline-style: groove;}
+p.ridge {outline-style: ridge;}
+p.inset {outline-style: inset;}
+p.outset {outline-style: outset;}
+p.ex1 {
+  border: 1px solid black;
+  outline-style: solid;
+  outline-color: red;
+  outline-width: thin;
+}
+
+p.ex2 {
+  border: 1px solid black;
+  outline-style: double;
+  outline-color: green;
+  outline-width: medium;
+}
+
+p.ex3 {
+  border: 1px solid black;
+  outline-style: outset;
+  outline-color: yellow;
+  outline-width: thick;
+}
+p.ex4 {
+  border: 1px solid yellow;
+  outline-style: solid;
+  outline-color: invert;
+  outline-width: 4px;
+}
+</style>
+</head>
+<body>
+
+<p>This element has a 2px black border and a green outline with a width of 10px.</p>
+
+<h2>The outline-color Property</h2>
+
+<p class="ex1">A solid red outline.</p>
+<p class="ex2">A double green outline.</p>
+<p class="ex3">An outset yellow outline.</p>
+<p class="ex3">An outset invert outline.</p>
+</body>
+</html>

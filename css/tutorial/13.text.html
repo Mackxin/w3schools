@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    body {
+  color: blue;
+}
+div {
+  border: 1px solid gray;
+  padding: 8px;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #4CAF50;
+  text-decoration: overline;
+  letter-spacing: 3px;
+  word-spacing: 10px;
+  text-shadow: 3px 2px red;
+}
+h2{
+    text-decoration: underline;
+    letter-spacing: -3px;
+    word-spacing: -5px;
+}
+p {
+  text-indent: 50px;
+  text-align: justify;
+  letter-spacing: 3px;
+  text-decoration: line-through;
+}
+
+a {
+  text-decoration: none;
+  color: #008CBA;
+}
+p.uppercase {
+  text-transform: uppercase;
+}
+
+p.lowercase {
+  text-transform: lowercase;
+}
+
+p.capitalize {
+  text-transform: capitalize;
+}
+p.small {
+  line-height: 0.7;
+}
+
+p.big {
+  line-height: 1.8;
+}
+
+p.ex1 {
+  direction: rtl;
+}
+</style>
+</head>
+<body>
+
+<div>
+  <h1>text formatting</h1>
+  <h2>hahahhaahah</h2>
+  <p>This text is styled with some of the text formatting properties. The heading uses the text-align, text-transform, and color properties.
+  The paragraph is indented, aligned, and the space between characters is specified. The underline is removed from this colored
+  <a target="_blank" href="tryit.asp?filename=trycss_text">"Try it Yourself"</a> link.</p>
+</div>
+<p class="uppercase">This is some text.</p>
+<p class="lowercase">This is some text.</p>
+<p class="capitalize">This is some text.</p>
+
+<p>
+This is a paragraph with a standard line-height.<br>
+The default line height in most browsers is about 110% to 120%.<br>
+</p>
+<p class="small">
+This is a paragraph with a smaller line-height.<br>
+This is a paragraph with a smaller line-height.<br>
+</p>
+<p class="big">
+This is a paragraph with a bigger line-height.<br>
+This is a paragraph with a bigger line-height.<br>
+</p>
+
+<p>This is the default text direction.</p>
+<p class="ex1"><bdo dir="rtl">This is right-to-left text direction.</bdo></p>
+
+</body>
+</html>
