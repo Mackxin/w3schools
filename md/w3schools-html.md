@@ -1053,3 +1053,347 @@ oninput="x.value=parseInt(a.value)+parseInt(b.value)">
 
 ```
 
+## Input Types（输入类型）
+
+```html
+<input type='button'>    <!-- 按钮 -->
+<input type='checkbox'>  <!-- 复选框 -->
+<input type='color'>     <!-- 颜色输入框 -->
+<input type='date'>      <!-- 年月日框 -->
+<input type='datetime-local'>    <!-- 年月日时间框 -->
+<input type='email'>      <!-- 邮箱输入框 -->
+<input type='file'>       <!-- 文件上传按钮 -->
+<input type='hidden'>     <!-- 隐藏框 -->
+<input type='image'>
+<input type='month'>      <!-- 月份年份选择框 -->
+<input type='number'>     <!-- 数字输入框 -->
+<input type='password'>   <!-- 密码框 -->
+<input type='radio'>      <!-- 单选框 -->
+<input type='range'>      <!-- 控件范围框可滑动 -->
+<input type='reset'>      <!-- 重置按钮 -->
+<input type='search'>     <!-- 搜索框跟文本框差不多 -->
+<input type='submit'>     <!-- 提交按钮 -->
+<input type='tel'>        <!-- 电话框 -->
+<input type='text'>       <!-- 文本输入框 -->
+<input type='time'>       <!-- 自定义时间框 -->
+<input type='url'>        <!-- 网址地址框 -->
+<input type='week'>       <!-- 自定义年和周框 -->
+```
+input 的一些特殊属性
+
+- max   限定输入框中的最大值
+- min   限定输入框中的最小值
+- disabled  输入框加入了这个属性会禁用输入哈
+- maxlength   限定输入字段的最大字符数
+- value   指定输入框中默认的文字
+- step  指定字段合法的间隔设置
+- pattern   设置指定的正则规则
+
+```html
+<form>
+  输入1980-01-01之前的日期：
+  <input type="date" name="bday" max="1979-12-31"><br>
+  输入2000-01-01之后的日期：
+  <input type="date" name="bday" min="2000-01-02"><br>
+</form>
+```
+
+```html
+<form>
+  数字框中的数字要在1到5之间:
+  <input type="number" name="quantity" min="1" max="5">
+</form>
+```
+
+```html
+<form action="/action_page.php">
+  数字:
+  <input type="number" name="quantity"
+   min="0" max="100" step="10" value="30">
+  <input type="submit">
+</form>
+```
+
+```html
+<form>
+  电话:
+  <input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+</form>
+```
+
+## Input Attributes（输入属性）
+
+value属性（默认值）
+
+```html
+<form action="">
+  First name:<br>
+  <input type="text" name="firstname" value="John">
+</form>
+```
+
+readonly属性 （只读，不能更改哈）
+
+```html
+<form action="">
+  First name:<br>
+  <input type="text" name="firstname" value="John" readonly>
+</form>
+```
+
+disabled属性 （禁止输入）
+
+```html
+<form action="">
+  First name:<br>
+  <input type="text" name="firstname" value="John" disabled>
+</form>
+```
+
+size属性 （指定输入的字符大小）
+
+```html
+<form action="">
+  First name:<br>
+  <input type="text" name="firstname" maxlength="10">
+</form>
+```
+
+maxlength （指定输入字段允许的最大长度）
+
+```html
+<form action="">
+  First name:<br>
+  <input type="text" name="firstname" maxlength="10">
+</form>
+```
+
+HTML5新增的input属性还有：
+
+- autocomplete    自动完成on/off
+- autofocus           自动对焦到此输入框，无值
+- form
+- formaction
+- formenctype
+- formmethod      设置提交数据方法
+- formnovalidate
+- formtarget      在新窗口提交数据
+- height and width
+- list
+- min and max
+- multiple
+- patern(regexp)
+- placeholder
+- required
+- step
+
+还有form的一些属性
+
+- autocomplete    on/off
+- novalidate    指定提交时不应验证表单数据
+
+```html
+<form action="/action_page.php" id="form1">
+  First name: <input type="text" name="fname"><br>
+  <input type="submit" value="Submit">
+</form>
+
+Last name: <input type="text" name="lname" form="form1">
+```
+
+```html
+<form action="/action_page.php">
+  First name: <input type="text" name="fname"><br>
+  Last name: <input type="text" name="lname"><br>
+  <input type="submit" value="Submit"><br>
+  <input type="submit" formaction="/action_page2.php"
+  value="Submit as admin">
+</form>
+```
+
+```html
+<form action="/action_page_binary.asp" method="post">
+  First name: <input type="text" name="fname"><br>
+  <input type="submit" value="Submit">
+  <input type="submit" formenctype="multipart/form-data"
+  value="Submit as Multipart/form-data">
+</form>
+```
+
+```html
+<form action="/action_page.php" method="get">
+  First name: <input type="text" name="fname"><br>
+  Last name: <input type="text" name="lname"><br>
+  <input type="submit" value="Submit">
+  <input type="submit" formmethod="post" value="Submit using POST">
+</form>
+```
+
+```html
+<form action="/action_page.php">
+  E-mail: <input type="email" name="userid"><br>
+  <input type="submit" value="Submit"><br>
+  <input type="submit" formnovalidate value="Submit without validation">
+</form>
+```
+
+```html
+<form action="/action_page.php">
+  First name: <input type="text" name="fname"><br>
+  Last name: <input type="text" name="lname"><br>
+  <input type="submit" value="Submit as normal">
+  <input type="submit" formtarget="_blank"
+  value="Submit to a new window">
+</form>
+```
+
+input image
+
+```html
+<input type="image" src="img_submit.gif" alt="Submit" width="48" height="48">
+```
+
+list
+
+```html
+<input list="browsers">
+
+<datalist id="browsers">
+  <option value="Internet Explorer">
+  <option value="Firefox">
+  <option value="Chrome">
+  <option value="Opera">
+  <option value="Safari">
+</datalist>
+```
+
+min and max
+
+```html
+Enter a date before 1980-01-01:
+<input type="date" name="bday" max="1979-12-31">
+
+Enter a date after 2000-01-01:
+<input type="date" name="bday" min="2000-01-02">
+
+Quantity (between 1 and 5):
+<input type="number" name="quantity" min="1" max="5">
+```
+
+multiple  允许用户上传多个文件
+
+```html
+Select images: <input type="file" name="img" multiple>
+```
+
+pattern   指定输入元素值的正则表达式
+
+```html
+Country code: <input type="text" name="country_code" pattern="[A-Za-z]{3}" title="Three letter country code">
+
+```
+
+placeholder  在输入框中会出现灰色提示，当你输入内容后自动隐藏哈
+
+```html
+<input type="text" name="fname" placeholder="First name">
+```
+
+required  加了这个属性就是这个是必填项，不然无法提交
+
+```html
+Username: <input type="text" name="usrname" required>
+
+```
+
+step  设定值每次增加或者减少的间距是多少
+
+```html
+<input type="number" name="points" step="3">
+```
+
+## HTML5 Intro（简介）
+
+```html
+<!DOCTYPE html>
+<html>
+    <meta charset='UTF-8'>
+</html>
+```
+
+## HTML5 Support（支持）
+
+这个自己琢磨看官网哈
+
+## HTML5 New Elements（新元素）
+
+- article
+- aside
+- bdi
+- details
+- dialog
+- figcaption
+- figure
+- footer
+- header
+- main
+- meter
+- mark
+- nav
+- progress
+- rp
+- rt
+- ruby
+- section
+- summary
+- time
+- wbr
+
+## HTML5 Semantic（语义）
+
+section
+
+header
+
+article
+
+footer
+
+nav
+
+aside
+
+figure
+
+## HTML5 Migration（迁移）
+
+这个还是自己去官网琢磨吧！
+
+## HTML5 Style Guide（样式指南）
+
+```html
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="styles.css">
+```
+
+```html
+<section> 
+  <p>This is a paragraph.</p>
+</section>
+<img src="html5.gif" alt="HTML5">   <!--图片最好都加上alt属性-->
+```
+
+```html
+<!DOCTYPE html>
+<html lang='en-US'>
+    <head>
+        <meta charset='UTF-8'>
+    	<title>mackxin</title>
+    </head\>
+</html>
+```
+
+注意细节就好了，多练就熟悉了
+
